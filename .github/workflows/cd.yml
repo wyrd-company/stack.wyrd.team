@@ -56,7 +56,7 @@ jobs:
       name: cloudflare-pages
       url: ${{ steps.deploy.outputs.deployment-url }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - id: deploy
         uses: ./.github/actions/deploy-cf-pages
         with:
@@ -77,6 +77,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - id: deploy
         uses: ./.github/actions/deploy-gh-pages
